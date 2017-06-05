@@ -1,3 +1,4 @@
+# VARS
 # SYS WIDE
 /usr/bin/setxkbmap -option "ctrl:nocaps" 
 source /data/shellshock/env/bin/activate
@@ -10,14 +11,16 @@ source /data/shellshock/env/bin/activate
 SHELL=/usr/bin/zsh
 
 # ALIASES
+alias rzsh='source $HOME/.zshrc.local && echo "zsh env has been reloaded"'
 alias p='~/bin/check_ping.sh'
-alias vi='vim'
+alias vi='nvim'
 alias eq='pulseaudio-equalizer toggle > /dev/null 2>&1'
-alias evim='vi ~/.vimrc'
+alias evim='vi ~/.nvimrc'
 alias ezsh='vi ~/.zshrc.local'
 alias etmux='vi ~/.tmux.conf'
 alias wifi='sudo /home/shellshock/install/create_ap/create_ap wlp2s0 ppp0 dnull'
 alias caps='/usr/bin/setxkbmap -option "ctrl:nocaps"'
 alias xc='xclip -selection c'
 alias f='ranger'
+alias D='~/bin/diary.sh'
 alias awsmfa_quitagroup='eval $(awsmfa -i quintagroup --env arn:aws:sts::450845458504:role/Developer -t prozorro_sandbox)'
