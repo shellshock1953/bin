@@ -13,7 +13,7 @@ SHELL=/usr/bin/zsh
 # ALIASES
 alias rzsh='source $HOME/.zshrc.local && echo "zsh env has been reloaded"'
 alias p='~/bin/check_ping.sh'
-alias vi='nvim'
+alias vi='vim'
 alias eq='pulseaudio-equalizer toggle > /dev/null 2>&1'
 alias evim='vi ~/.nvimrc'
 alias ezsh='vi ~/.zshrc.local'
