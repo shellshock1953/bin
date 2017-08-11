@@ -1,14 +1,31 @@
 # VARS
 # SYS WIDE
-/usr/bin/setxkbmap -option "ctrl:nocaps" 
-source /data/shellshock/env/bin/activate
-# virtenv django for python2
-# export WORKON_HOME=~/.virtualenvs
-# source /usr/bin/virtualenvwrapper.sh
-# export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python2.7
-# export VIRTUALENVWRAPPER_VIRTUALENV=/usr/bin/virtualenv2
-# XTERM=xterm-256color
-SHELL=/usr/bin/zsh
+echo "
+INIT NEW CONSOLE
+- Welcome on
+           __         ____     __               __           ___   __      ____
+     _____/ /_  ___  / / /____/ /_  ____  _____/ /__    ____/ / | / /_  __/ / /
+    / ___/ __ \/ _ \/ / / ___/ __ \/ __ \/ ___/ //_/   / __  /  |/ / / / / / / 
+   (__  ) / / /  __/ / (__  ) / / / /_/ / /__/ ,<     / /_/ / /|  / /_/ / / /  
+  /____/_/ /_/\___/_/_/____/_/ /_/\____/\___/_/|_|    \__,_/_/ |_/\__,_/_/_/  
+
+"
+echo "Auto Stuff:"
+# AUTO STUFF
+~/bin/swap_ctrl_caps.sh
+~/bin/disable_wacom_touch.sh
+
+
+echo "Sources:"
+# SOURCES
+~/bin/load_env.sh
+
+# EXPORTS
+export VAGRANT_HOME='/data/.vagrant.d'
+export AWS_PROFILE=prozorro_sandbox
+export HOSTALIASES=~/.hosts
+export SHELL=/usr/bin/zsh
+echo "Exports - done"
 
 # ALIASES
 alias rzsh='source $HOME/.zshrc.local && echo "zsh env has been reloaded"'
@@ -24,3 +41,13 @@ alias xc='xclip -selection c'
 alias f='ranger'
 alias D='~/bin/diary.sh'
 alias awsmfa_quitagroup='eval $(awsmfa -i quintagroup --env arn:aws:sts::450845458504:role/Developer -t prozorro_sandbox)'
+alias master='ssh vagrant@10.0.0.11'
+alias client='ssh vagrant@10.0.0.10'
+alias wacom='~/bin/disable_wacom_touch.sh'
+echo "Aliases - done"
+
+echo "" 
+echo "Ready to go...  "
+
+
+
