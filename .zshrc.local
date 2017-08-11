@@ -19,6 +19,7 @@ echo "Auto Stuff:"
 echo "Sources:"
 # SOURCES
 ~/bin/load_env.sh
+~/bin/private
 
 # EXPORTS
 export VAGRANT_HOME='/data/.vagrant.d'
@@ -40,7 +41,6 @@ alias caps='/usr/bin/setxkbmap -option "ctrl:nocaps"'
 alias xc='xclip -selection c'
 alias f='ranger'
 alias D='~/bin/diary.sh'
-alias awsmfa_quitagroup='eval $(awsmfa -i quintagroup --env arn:aws:sts::450845458504:role/Developer -t prozorro_sandbox)'
 alias master='ssh vagrant@10.0.0.11'
 alias client='ssh vagrant@10.0.0.10'
 alias wacom='~/bin/disable_wacom_touch.sh'
