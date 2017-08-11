@@ -23,7 +23,6 @@ echo "Sources:"
 
 # EXPORTS
 export VAGRANT_HOME='/data/.vagrant.d'
-export AWS_PROFILE=prozorro_sandbox
 export HOSTALIASES=~/.hosts
 export SHELL=/usr/bin/zsh
 echo "Exports - done"
