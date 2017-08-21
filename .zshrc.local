@@ -15,11 +15,18 @@ echo "Auto Stuff:"
 ~/bin/swap_ctrl_caps.sh
 ~/bin/disable_wacom_touch.sh
 
+echo "GPG Stuff:"
+GPG_TTY=$(tty)
+export GPG_TTY
+echo "- gpg-agent is connected to $GPG_TTY"
 
 echo "Sources:"
 # SOURCES
 ~/bin/load_env.sh
-~/bin/private
+
+echo "Private sources:"
+# PRIVETE SOURCES
+source <(gpg2 --decrypt ~/bin/private.gpg)
 
 # EXPORTS
 export VAGRANT_HOME='/data/.vagrant.d'
@@ -35,6 +42,7 @@ alias eq='pulseaudio-equalizer toggle > /dev/null 2>&1'
 alias evim='vi ~/.nvimrc'
 alias ezsh='vi ~/.zshrc.local'
 alias etmux='vi ~/.tmux.conf'
+alias egpg='vi ~/.gnupg/gpg.conf'
 alias wifi='sudo /home/shellshock/install/create_ap/create_ap wlp2s0 ppp0 dnull'
 alias caps='/usr/bin/setxkbmap -option "ctrl:nocaps"'
 alias xc='xclip -selection c'
@@ -43,10 +51,12 @@ alias D='~/bin/diary.sh'
 alias master='ssh vagrant@10.0.0.11'
 alias client='ssh vagrant@10.0.0.10'
 alias wacom='~/bin/disable_wacom_touch.sh'
+alias ww='watch -n0.1 $1'
 echo "Aliases - done"
 
 echo "" 
 echo "Ready to go...  "
 
-
+#PROMPT
+#. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
