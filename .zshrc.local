@@ -34,15 +34,20 @@ export HOSTALIASES=~/.hosts
 export SHELL=/usr/bin/zsh
 echo "Exports - done"
 
+# SSH
+#ssh-add
+
 # ALIASES
 alias rzsh='source $HOME/.zshrc.local && echo "zsh env has been reloaded"'
 alias p='~/bin/check_ping.sh'
 alias vi='vim'
 alias eq='pulseaudio-equalizer toggle > /dev/null 2>&1'
+# quick edits
 alias evim='vi ~/.nvimrc'
 alias ezsh='vi ~/.zshrc.local'
 alias etmux='vi ~/.tmux.conf'
 alias egpg='vi ~/.gnupg/gpg.conf'
+alias essh='vi ~/.ssh/config'
 alias wifi='sudo /home/shellshock/install/create_ap/create_ap wlp2s0 ppp0 dnull'
 alias caps='/usr/bin/setxkbmap -option "ctrl:nocaps"'
 alias xc='xclip -selection c'
