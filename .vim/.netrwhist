@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_1='/data/gitlab/ansible-role-netdata/tests/group_vars'
+let g:netrw_dirhist_2='/data/gitlab/ansible-role-netdata/defaults'
+let g:netrw_dirhist_3='/data/gitlab/ansible-role-influxdb/templates'
+let g:netrw_dirhist_4='/data/gitlab/devops/ansible-role-netdata/defaults'
+let g:netrw_dirhist_5='/data/gitlab/devops/tests/group_vars'
+let g:netrw_dirhist_6='/data/gitlab/devops/dutch_auction/provisions/hosts'
