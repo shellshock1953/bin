@@ -5,23 +5,45 @@ if [[ $HOSTNAME = "s.dnull" ]]; then
 	echo "
 INIT NEW CONSOLE
 - Welcome on
-
-	       ___   __      ____                        ____         
-	  ____/ / | / /_  __/ / /  _________ ___  ____ _/ / /__  _____
-	 / __  /  |/ / / / / / /  / ___/ __  __ \/ __  / / / _ \/ ___/
-	/ /_/ / /|  / /_/ / / /  (__  ) / / / / / /_/ / / /  __/ /    
-	\__,_/_/ |_/\__,_/_/_/  /____/_/ /_/ /_/\__,_/_/_/\___/_/     
+▓█████▄  ███▄    █  █    ██  ██▓     ██▓         ██████  ███▄ ▄███▓ ▄▄▄       ██▓     ██▓    ▓█████  ██▀███  
+▒██▀ ██▌ ██ ▀█   █  ██  ▓██▒▓██▒    ▓██▒       ▒██    ▒ ▓██▒▀█▀ ██▒▒████▄    ▓██▒    ▓██▒    ▓█   ▀ ▓██ ▒ ██▒
+░██   █▌▓██  ▀█ ██▒▓██  ▒██░▒██░    ▒██░       ░ ▓██▄   ▓██    ▓██░▒██  ▀█▄  ▒██░    ▒██░    ▒███   ▓██ ░▄█ ▒
+░▓█▄   ▌▓██▒  ▐▌██▒▓▓█  ░██░▒██░    ▒██░         ▒   ██▒▒██    ▒██ ░██▄▄▄▄██ ▒██░    ▒██░    ▒▓█  ▄ ▒██▀▀█▄  
+░▒████▓ ▒██░   ▓██░▒▒█████▓ ░██████▒░██████▒   ▒██████▒▒▒██▒   ░██▒ ▓█   ▓██▒░██████▒░██████▒░▒████▒░██▓ ▒██▒
+ ▒▒▓  ▒ ░ ▒░   ▒ ▒ ░▒▓▒ ▒ ▒ ░ ▒░▓  ░░ ▒░▓  ░   ▒ ▒▓▒ ▒ ░░ ▒░   ░  ░ ▒▒   ▓▒█░░ ▒░▓  ░░ ▒░▓  ░░░ ▒░ ░░ ▒▓ ░▒▓░
+ ░ ▒  ▒ ░ ░░   ░ ▒░░░▒░ ░ ░ ░ ░ ▒  ░░ ░ ▒  ░   ░ ░▒  ░ ░░  ░      ░  ▒   ▒▒ ░░ ░ ▒  ░░ ░ ▒  ░ ░ ░  ░  ░▒ ░ ▒░
+ ░ ░  ░    ░   ░ ░  ░░░ ░ ░   ░ ░     ░ ░      ░  ░  ░  ░      ░     ░   ▒     ░ ░     ░ ░      ░     ░░   ░ 
+   ░             ░    ░         ░  ░    ░  ░         ░         ░         ░  ░    ░  ░    ░  ░   ░  ░   ░     
+ ░                                                                                                           
 "
-else
-	echo "
-INIT NEW CONSOLE
+elif [[ $HOSTNAME = "dnull" ]]; then
+    echo "
+INIT NEW CONSOLE                                                  
 - Welcome on
 
-		   __         ____     __               __           ___   __      ____
-	     _____/ /_  ___  / / /____/ /_  ____  _____/ /__    ____/ / | / /_  __/ / /
-	    / ___/ __ \/ _ \/ / / ___/ __ \/ __ \/ ___/ //_/   / __  /  |/ / / / / / / 
-	   (__  ) / / /  __/ / (__  ) / / / /_/ / /__/ ,<     / /_/ / /|  / /_/ / / /  
-	  /____/_/ /_/\___/_/_/____/_/ /_/\____/\___/_/|_|    \__,_/_/ |_/\__,_/_/_/  
+▓█████▄  ███▄    █  █    ██  ██▓     ██▓                       ██████ ▓█████  ▄████▄  
+▒██▀ ██▌ ██ ▀█   █  ██  ▓██▒▓██▒    ▓██▒                     ▒██    ▒ ▓█   ▀ ▒██▀ ▀█  
+░██   █▌▓██  ▀█ ██▒▓██  ▒██░▒██░    ▒██░                     ░ ▓██▄   ▒███   ▒▓█    ▄ 
+░▓█▄   ▌▓██▒  ▐▌██▒▓▓█  ░██░▒██░    ▒██░                       ▒   ██▒▒▓█  ▄ ▒▓▓▄ ▄██▒
+░▒████▓ ▒██░   ▓██░▒▒█████▓ ░██████▒░██████▒       ██▓       ▒██████▒▒░▒████▒▒ ▓███▀ ░
+ ▒▒▓  ▒ ░ ▒░   ▒ ▒ ░▒▓▒ ▒ ▒ ░ ▒░▓  ░░ ▒░▓  ░       ▒▓▒       ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ░▒ ▒  ░
+ ░ ▒  ▒ ░ ░░   ░ ▒░░░▒░ ░ ░ ░ ░ ▒  ░░ ░ ▒  ░       ░▒        ░ ░▒  ░ ░ ░ ░  ░  ░  ▒   
+ ░ ░  ░    ░   ░ ░  ░░░ ░ ░   ░ ░     ░ ░          ░         ░  ░  ░     ░   ░        
+   ░             ░    ░         ░  ░    ░  ░        ░              ░     ░  ░░ ░      
+ ░                                                  ░                        ░        
+"
+    else
+echo "
+INIT NEW CONSOLE                                                  
+- Welcome on
+
+ ██████╗ ██╗   ██╗██╗███╗   ██╗████████╗ █████╗ 
+██╔═══██╗██║   ██║██║████╗  ██║╚══██╔══╝██╔══██╗
+██║   ██║██║   ██║██║██╔██╗ ██║   ██║   ███████║
+██║▄▄ ██║██║   ██║██║██║╚██╗██║   ██║   ██╔══██║
+╚██████╔╝╚██████╔╝██║██║ ╚████║   ██║   ██║  ██║
+ ╚══▀▀═╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝
+                                                
 "
 fi
 
@@ -37,7 +59,8 @@ echo "- gpg-agent is connected to $GPG_TTY"
 
 echo "Sources:"
 # SOURCES
-~/bin/load_env.sh
+export ENV_PATH="/data/ENV/bin"
+~/bin/load_env.sh && export PATH=$PATH:$ENV_PATH
 
 echo "Private sources:"
 # PRIVETE SOURCES
@@ -53,8 +76,10 @@ echo "Exports - done"
 #ssh-add
 
 # ALIASES
+alias main='tmux a -t "1  MAIN"'
 alias rzsh='source $HOME/.zshrc.local && echo "zsh env has been reloaded"'
 alias p='~/bin/check_ping.sh'
+alias c='xclip'
 alias vi='vim'
 alias eq='pulseaudio-equalizer toggle > /dev/null 2>&1'
 # quick edits
@@ -68,10 +93,23 @@ alias caps='/usr/bin/setxkbmap -option "ctrl:nocaps"'
 alias xc='xclip -selection c'
 alias f='ranger'
 alias D='~/bin/diary.sh'
-alias master='ssh vagrant@10.0.1.101'
-alias client='ssh vagrant@10.0.1.102'
+alias 101='ssh vagrant@10.0.1.101'
+alias 102='ssh vagrant@10.0.1.102'
+alias 103='ssh vagrant@10.0.1.103'
+alias 104='ssh vagrant@10.0.1.104'
+alias 105='ssh vagrant@10.0.1.105'
+alias 106='ssh vagrant@10.0.1.106'
+alias 107='ssh vagrant@10.0.1.107'
+alias 108='ssh vagrant@10.0.1.108'
+alias 109='ssh vagrant@10.0.1.109'
+alias 110='ssh vagrant@10.0.1.110'
+alias 111='ssh vagrant@10.0.1.111'
+alias 112='ssh vagrant@10.0.1.112'
+alias omaster='ssh 192.168.4.169'
+alias oclient='ssh 192.168.4.---'
 alias wacom='~/bin/disable_wacom_touch.sh'
 alias ww='watch -n0.1 $1'
+alias ssh-keygen='ssh-keygen -t ed25519'
 echo "Aliases - done"
 
 echo "" 
