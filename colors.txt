@@ -52,4 +52,4 @@ function nonzero_return() {
 
 export PS1="\[\e[34;41m\]\`nonzero_return\`\[\e[m\]\[\e[37;44m\][\[\e[m\]\[\e[37;44m\]\A\[\e[m\]\[\e[37;44m\] \[\e[m\]\[\e[36;44m\]\u\[\e[m\]\[\e[35;44m\]@\[\e[m\]\[\e[32;44m\]\w\[\e[m\]\[\e[37;44m\]]\[\e[m\]\[\e[32m\]\`parse_git_branch\`\[\e[m\]\[\e[34m\]\\$\[\e[m\] "
 
-export PS1="\[\033[38;5;240m\]\$?[\[$(tput sgr0)\]\[\033[38;5;8m\]\t\[$(tput sgr0)\]\[\033[38;5;240m\]]\[$(tput sgr0)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;241m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;6m\]\w\[$(tput sgr0)\]]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\]"
+export PS1="\[\033[38;5;240m\]\$?[\[$(tput sgr0)\]\[\033[38;5;8m\]\t\[$(tput sgr0)\]\[\033[38;5;240m\]]\[$(tput sgr0)\]\[\033[38;5;6m\][\[$(tput sgr0)\]\[\033[38;5;241m\]\u\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;87m\]\w\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;6m\]]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput sgr0)\] \`parse_git_branch\`"
