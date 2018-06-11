@@ -50,4 +50,4 @@ function nonzero_return() {
 	[ $RETVAL -ne 0 ] && echo "$RETVAL"
 }
 
-export PS1="\[\e[31m\]\`nonzero_return\`\[\e[m\] [\[\e[34m\]\A\[\e[m\] \[\e[36m\]\u\[\e[m\]@\W] \[\e[32m\]\`parse_git_branch\`\[\e[m\]\\$  "
+export PS1="\[\e[34;41m\]\`nonzero_return\`\[\e[m\]\[\e[37;44m\][\[\e[m\]\[\e[37;44m\]\A\[\e[m\]\[\e[37;44m\] \[\e[m\]\[\e[36;44m\]\u\[\e[m\]\[\e[35;44m\]@\[\e[m\]\[\e[32;44m\]\w\[\e[m\]\[\e[37;44m\]]\[\e[m\]\[\e[32m\]\`parse_git_branch\`\[\e[m\]\[\e[34m\]\\$\[\e[m\] "
