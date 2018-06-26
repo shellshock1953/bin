@@ -57,10 +57,6 @@ GPG_TTY=$(tty)
 export GPG_TTY
 echo "- gpg-agent is connected to $GPG_TTY"
 
-echo "Sources:"
-# SOURCES
-export ENV_PATH="/data/ENV/bin"
-~/bin/load_env.sh && export PATH=$PATH:$ENV_PATH
 
 echo "Private sources:"
 # PRIVETE SOURCES
@@ -70,6 +66,7 @@ source <(gpg2 --decrypt ~/bin/private.gpg)
 export VAGRANT_HOME='/data/.vagrant.d'
 export HOSTALIASES=~/.hosts
 export SHELL=/usr/bin/zsh
+export PASSWORD_STORE_CLIP_TIME=180
 echo "Exports - done"
 
 # SSH
@@ -93,6 +90,8 @@ alias caps='/usr/bin/setxkbmap -option "ctrl:nocaps"'
 alias xc='xclip -selection c'
 alias f='ranger'
 alias D='~/bin/diary.sh'
+alias 151='ssh vagrant@10.0.5.101'
+alias 152='ssh vagrant@10.0.5.102'
 alias 101='ssh vagrant@10.0.1.101'
 alias 102='ssh vagrant@10.0.1.102'
 alias 103='ssh vagrant@10.0.1.103'
@@ -110,6 +109,9 @@ alias oclient='ssh 192.168.4.---'
 alias wacom='~/bin/disable_wacom_touch.sh'
 alias ww='watch -n0.1 $1'
 alias ssh-keygen='ssh-keygen -t ed25519'
+alias gottyr='pgrep gotty'
+alias gottyk='pkill -1 gotty'
+alias learn='echo -e \\n`date`\\n >> ~/learn.txt && vi + ~/learn.txt'
 echo "Aliases - done"
 
 echo "" 
@@ -118,3 +120,25 @@ echo "Ready to go...  "
 #PROMPT
 #. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
+
+VENV=quinta
+echo "Sources: $VENV"
+# SOURCES
+#export ENV_PATH="/data/ENV/quinta/bin"
+#~/bin/load_env.sh && export PATH=$PATH:$ENV_PATH
+source ~/ENV/quinta/bin/activate 
+export PATH=$PATH:~/ENV/quinta/bin
+
+# FUNCs
+# function virtual_env_prompt () {
+#     REPLY=${VIRTUAL_ENV+(${VIRTUAL_ENV:t}) }
+# }
+# grml_theme_add_token virtual-env -f virtual_env_prompt '%F{magenta}' '%f'
+# zstyle ':prompt:grml:left:setup' items rc virtual-env change-root user at host path vcs percent
+# export LANGUAGE = "en_US.UTF-8"
+# export LC_ALL = "en_US.UTF-8"
+# export LC_TIME = "uk_UA.UTF-8"
+# export LC_CTYPE = "en_US.UTF-8"
+# export LANG = "en_US.UTF-8"
+# 
+export HISTTIMEFORMAT="%d/%m/%y %T "
