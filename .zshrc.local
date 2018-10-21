@@ -68,6 +68,7 @@ export HOSTALIASES=~/.hosts
 export SHELL=/usr/bin/zsh
 export PASSWORD_STORE_CLIP_TIME=180
 echo "Exports - done"
+export GNUPGHOME=/home/shellshock/dNull/sec
 
 # SSH
 #ssh-add
@@ -112,6 +113,7 @@ alias ssh-keygen='ssh-keygen -t ed25519'
 alias gottyr='pgrep gotty'
 alias gottyk='pkill -1 gotty'
 alias learn='echo -e \\n`date`\\n >> ~/learn.txt && vi + ~/learn.txt'
+alias dr='~/bin/display.sh'
 echo "Aliases - done"
 
 echo "" 
@@ -142,3 +144,6 @@ export PATH=$PATH:~/ENV/quinta/bin
 # export LANG = "en_US.UTF-8"
 # 
 export HISTTIMEFORMAT="%d/%m/%y %T "
+
+# WOL
+nmcli c modify "Wired connection 1" 802-3-ethernet.wake-on-lan magic
