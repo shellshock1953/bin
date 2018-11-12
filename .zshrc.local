@@ -1,4 +1,6 @@
 # VARS
+VENV=bfg
+
 # SYS WIDE
 HOSTNAME=`hostname`
 if [[ $HOSTNAME = "s.dnull" ]]; then
@@ -32,6 +34,48 @@ INIT NEW CONSOLE
    ░             ░    ░         ░  ░    ░  ░        ░              ░     ░  ░░ ░      
  ░                                                  ░                        ░        
 "
+elif [[ $HOSTNAME = "bfg" ]]; then
+    echo "
+INIT NEW CONSOLE
+- Welcome on
+                                                              
+BBBBBBBBBBBBBBBBB   FFFFFFFFFFFFFFFFFFFFFF       GGGGGGGGGGGGG
+B::::::::::::::::B  F::::::::::::::::::::F    GGG::::::::::::G
+B::::::BBBBBB:::::B F::::::::::::::::::::F  GG:::::::::::::::G
+BB:::::B     B:::::BFF::::::FFFFFFFFF::::F G:::::GGGGGGGG::::G
+  B::::B     B:::::B  F:::::F       FFFFFFG:::::G       GGGGGG
+  B::::B     B:::::B  F:::::F            G:::::G              
+  B::::BBBBBB:::::B   F::::::FFFFFFFFFF  G:::::G              
+  B:::::::::::::BB    F:::::::::::::::F  G:::::G    GGGGGGGGGG
+  B::::BBBBBB:::::B   F:::::::::::::::F  G:::::G    G::::::::G
+  B::::B     B:::::B  F::::::FFFFFFFFFF  G:::::G    GGGGG::::G
+  B::::B     B:::::B  F:::::F            G:::::G        G::::G
+  B::::B     B:::::B  F:::::F             G:::::G       G::::G
+BB:::::BBBBBB::::::BFF:::::::FF            G:::::GGGGGGGG::::G
+B:::::::::::::::::B F::::::::FF             GG:::::::::::::::G
+B::::::::::::::::B  F::::::::FF               GGG::::::GGG:::G
+BBBBBBBBBBBBBBBBB   FFFFFFFFFFF                  GGGGGG   GGGG
+
+"
+elif [[ $HOSTNAME = "raspberrypi" ]]; then
+    echo "
+INIT NEW CONSOLE
+- Welcome on
+$(tput setaf 2)
+       .~~.   .~~.
+      '. \ ' ' / .'$(tput setaf 1)
+       .~ .~~~..~.    $(tput sgr0)                   _                          _ $(tput setaf 1)
+      : .~.'~'.~. :   $(tput sgr0)   ___ ___ ___ ___| |_ ___ ___ ___ _ _    ___|_|$(tput setaf 1)
+     ~ (   ) (   ) ~  $(tput sgr0)  |  _| .'|_ -| . | . | -_|  _|  _| | |  | . | |$(tput setaf 1)
+    ( : '~'.~.'~' : ) $(tput sgr0)  |_| |__,|___|  _|___|___|_| |_| |_  |  |  _|_|$(tput setaf 1)
+     ~ .~ (   ) ~. ~  $(tput sgr0)              |_|                 |___|  |_|    $(tput setaf 1)
+      (  : '~' :  )
+       '~ .~~~. ~'
+           '~'
+$(tput sgr0)
+"
+
+
     else
 echo "
 INIT NEW CONSOLE                                                  
@@ -123,12 +167,11 @@ echo "Ready to go...  "
 #. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
-VENV=quinta
 echo "Sources: $VENV"
 # SOURCES
 #export ENV_PATH="/data/ENV/quinta/bin"
 #~/bin/load_env.sh && export PATH=$PATH:$ENV_PATH
-source ~/ENV/quinta/bin/activate 
+source ~/ENV/${VENV}/bin/activate 
 export PATH=$PATH:~/ENV/quinta/bin
 
 # FUNCs
