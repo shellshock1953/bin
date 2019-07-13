@@ -1,12 +1,22 @@
 # VARS
-VENV=bfg
-
-# SYS WIDE
+export PATH="$HOME/bin:$PATH"
 HOSTNAME=`hostname`
+VENV=${HOSTNAME}
+#
+# EXPORTS
+echo "Global exports"
+export VAGRANT_HOME='~/.vagrant.d' && echo "VAGRANT_HOME $VAGRANT_HOME"
+export HOSTALIASES=~/.hosts && echo "HOSTALIASES $HOSTALIASES"
+export SHELL=/usr/bin/zsh && echo "SHELL $SHELL"
+export PASSWORD_STORE_CLIP_TIME=180 && echo "PASSWORD_STORE_CLIP_TIME $PASSWORD_STORE_CLIP_TIME"
+export GNUPGHOME=/home/shellshock/dNull/sec && echo "GNUPGHOME $GNUPGHOME"
+echo "Exports - done"
+
+echo "INIT NEW CONSOLE"
+echo "- Welcome on"
+
 if [[ $HOSTNAME = "s.dnull" ]]; then
 	echo "
-INIT NEW CONSOLE
-- Welcome on
 ▓█████▄  ███▄    █  █    ██  ██▓     ██▓         ██████  ███▄ ▄███▓ ▄▄▄       ██▓     ██▓    ▓█████  ██▀███  
 ▒██▀ ██▌ ██ ▀█   █  ██  ▓██▒▓██▒    ▓██▒       ▒██    ▒ ▓██▒▀█▀ ██▒▒████▄    ▓██▒    ▓██▒    ▓█   ▀ ▓██ ▒ ██▒
 ░██   █▌▓██  ▀█ ██▒▓██  ▒██░▒██░    ▒██░       ░ ▓██▄   ▓██    ▓██░▒██  ▀█▄  ▒██░    ▒██░    ▒███   ▓██ ░▄█ ▒
@@ -20,9 +30,6 @@ INIT NEW CONSOLE
 "
 elif [[ $HOSTNAME = "dnull" ]]; then
     echo "
-INIT NEW CONSOLE                                                  
-- Welcome on
-
 ▓█████▄  ███▄    █  █    ██  ██▓     ██▓                       ██████ ▓█████  ▄████▄  
 ▒██▀ ██▌ ██ ▀█   █  ██  ▓██▒▓██▒    ▓██▒                     ▒██    ▒ ▓█   ▀ ▒██▀ ▀█  
 ░██   █▌▓██  ▀█ ██▒▓██  ▒██░▒██░    ▒██░                     ░ ▓██▄   ▒███   ▒▓█    ▄ 
@@ -36,9 +43,6 @@ INIT NEW CONSOLE
 "
 elif [[ $HOSTNAME = "bfg" ]]; then
     echo "
-INIT NEW CONSOLE
-- Welcome on
-                                                              
 BBBBBBBBBBBBBBBBB   FFFFFFFFFFFFFFFFFFFFFF       GGGGGGGGGGGGG
 B::::::::::::::::B  F::::::::::::::::::::F    GGG::::::::::::G
 B::::::BBBBBB:::::B F::::::::::::::::::::F  GG:::::::::::::::G
@@ -55,12 +59,9 @@ BB:::::BBBBBB::::::BFF:::::::FF            G:::::GGGGGGGG::::G
 B:::::::::::::::::B F::::::::FF             GG:::::::::::::::G
 B::::::::::::::::B  F::::::::FF               GGG::::::GGG:::G
 BBBBBBBBBBBBBBBBB   FFFFFFFFFFF                  GGGGGG   GGGG
-
 "
 elif [[ $HOSTNAME = "raspberrypi" ]]; then
     echo "
-INIT NEW CONSOLE
-- Welcome on
 $(tput setaf 2)
        .~~.   .~~.
       '. \ ' ' / .'$(tput setaf 1)
@@ -74,20 +75,14 @@ $(tput setaf 2)
            '~'
 $(tput sgr0)
 "
-
-
     else
 echo "
-INIT NEW CONSOLE                                                  
-- Welcome on
-
  ██████╗ ██╗   ██╗██╗███╗   ██╗████████╗ █████╗ 
 ██╔═══██╗██║   ██║██║████╗  ██║╚══██╔══╝██╔══██╗
 ██║   ██║██║   ██║██║██╔██╗ ██║   ██║   ███████║
 ██║▄▄ ██║██║   ██║██║██║╚██╗██║   ██║   ██╔══██║
 ╚██████╔╝╚██████╔╝██║██║ ╚████║   ██║   ██║  ██║
  ╚══▀▀═╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝
-                                                
 "
 fi
 
@@ -104,20 +99,14 @@ echo "- gpg-agent is connected to $GPG_TTY"
 
 echo "Private sources:"
 # PRIVETE SOURCES
-source <(gpg2 --decrypt ~/bin/private.gpg)
+# source <(gpg2 --decrypt ~/bin/private.gpg)
 
-# EXPORTS
-export VAGRANT_HOME='/data/.vagrant.d'
-export HOSTALIASES=~/.hosts
-export SHELL=/usr/bin/zsh
-export PASSWORD_STORE_CLIP_TIME=180
-echo "Exports - done"
-export GNUPGHOME=/home/shellshock/dNull/sec
 
 # SSH
 #ssh-add
 
 # ALIASES
+echo "Aliases:"
 alias main='tmux a -t "1  MAIN"'
 alias rzsh='source $HOME/.zshrc.local && echo "zsh env has been reloaded"'
 alias p='~/bin/check_ping.sh'
@@ -130,6 +119,8 @@ alias ezsh='vi ~/.zshrc.local'
 alias etmux='vi ~/.tmux.conf'
 alias egpg='vi ~/.gnupg/gpg.conf'
 alias essh='vi ~/.ssh/config'
+alias ei3='vi ~/.config/i3/config'
+alias epolybar='vi ~/.config/polybar/config'
 alias wifi='sudo /home/shellshock/install/create_ap/create_ap wlp2s0 ppp0 dnull'
 alias caps='/usr/bin/setxkbmap -option "ctrl:nocaps"'
 alias xc='xclip -selection c'
@@ -158,21 +149,21 @@ alias gottyr='pgrep gotty'
 alias gottyk='pkill -1 gotty'
 alias learn='echo -e \\n`date`\\n >> ~/learn.txt && vi + ~/learn.txt'
 alias dr='~/bin/display.sh'
+alias t='tree'
+alias display_off='xset dpms force off'
 echo "Aliases - done"
 
-echo "" 
-echo "Ready to go...  "
 
 #PROMPT
 #. /usr/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 
 
-echo "Sources: $VENV"
+echo "VENV Sources: $VENV"
 # SOURCES
 #export ENV_PATH="/data/ENV/quinta/bin"
 #~/bin/load_env.sh && export PATH=$PATH:$ENV_PATH
 source ~/ENV/${VENV}/bin/activate 
-export PATH=$PATH:~/ENV/quinta/bin
+export PATH=$PATH:~/ENV/${VENV}/bin
 
 # FUNCs
 # function virtual_env_prompt () {
@@ -189,4 +180,10 @@ export PATH=$PATH:~/ENV/quinta/bin
 export HISTTIMEFORMAT="%d/%m/%y %T "
 
 # WOL
-nmcli c modify "Wired connection 1" 802-3-ethernet.wake-on-lan magic
+# nmcli c modify "Wired connection 1" 802-3-ethernet.wake-on-lan magic
+sudo ethtool -s enp0s31f6 wol g
+
+echo "" 
+echo "Ready to go...  "
+xset -b
+
